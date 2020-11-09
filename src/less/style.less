@@ -1,0 +1,39 @@
+@import "./fonts.less";
+@import "./colors.less";
+@import "./UI/ui.less";
+@import "./atomic.less";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat;
+  background-color: @body-background;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.list-column {
+  display: flex;
+  flex-direction: column;
+}

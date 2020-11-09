@@ -1,0 +1,14 @@
+@values: range(5, 30, 5);
+
+
+each(@values, {
+    .mt-@{value} {
+      margin-top: ~"@{value}px";
+    }
+
+    .mb-@{value} {
+      margin-bottom: ~"@{value}px";
+    }
+  }
+
+)

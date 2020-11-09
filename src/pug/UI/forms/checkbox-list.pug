@@ -1,0 +1,39 @@
+.checkbox-list
+  .input.input-checkbox.mb-30
+    .input__header
+      h3.input__title Checkbox Buttons
+    .input__field-list.list-column
+      .input__field-group
+        input.input__field(type="checkbox")#smoke
+        label.input__label(for="smoke") Можно курить
+      .input__field-group
+        input.input__field(type="checkbox")#pet
+        label.input__label(for="pet") Можно с питомцами
+      .input__field-group
+        input.input__field(type="checkbox")#guest
+        label.input__label(for="guest") Можно пригласить гостей (до 10 человек)
+
+  .input.input-radio.mb-30
+    .input__header
+      h3.input__title Radio Buttons
+    .input__field-list.list-row
+      .input__field-group
+        input.input__field(type="radio" name="gender" checked)#gender-male
+        label.input__label(for="gender-male") Мужчина
+          .input__toggle
+            .input__fill
+      .input__field-group
+        input.input__field(type="radio" name="gender")#gender-female
+        label.input__label(for="gender-female") Женщина
+          .input__toggle
+            .input__fill
+
+  .input.input-toggle.mb-30
+    .input__header
+      h3.input__title Toggle
+    .input__field-list
+      .input__field-group
+        input.input__field(type="checkbox" name="mailsubscribe")#mailsubscribe
+        label.input__label(for="mailsubscribe")
+          .input__toggle
+            .input__fill

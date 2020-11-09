@@ -1,0 +1,25 @@
+.typo {
+  flex-basis: 500px;
+
+  &__list {
+    margin-bottom: 30px;
+  }
+  &__item {
+    display: flex;
+    margin-bottom: 50px;
+    position: relative;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__tag {
+    position: absolute;
+    margin-right: 30px;
+    text-align: right;
+    display: inline-block;
+    flex-basis: 50px;
+    right: 100%;
+    text-align: right;
+    color: @dark-shade-25;
+  }
+}

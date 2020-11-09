@@ -1,0 +1,169 @@
+@import "./input-checkbox.less";
+
+.input {
+  width: 320px;
+  position: relative;
+
+  .input-group & {
+    width: auto;
+    flex-grow: 1;
+    margin-right: 2rem;
+  }
+
+  .input-group &:last-child {
+    margin-right: 0;
+  }
+
+  .input-list > & {
+    margin-bottom: 1rem;
+  }
+
+  .input-list > &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__field:hover,
+  &__field:active {
+    color: @dark-shade-50;
+    border: 1px solid @dark-shade-50;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &__property {
+    text-transform: uppercase;
+    color: @dark-shade-50;
+  }
+
+  &__field[type="text"],
+  select&__field {
+    width: 100%;
+    padding: 13px 15px;
+    color: @dark-shade-25;
+    background-color: #ffffff;
+    border: 1px solid @dark-shade-25;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  /*&__field[type="checkbox"],*/
+  &__field[type="radio"] {
+    margin-right: 10px;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  /*&__field[type="checkbox"] + .input__label,*/
+  &__field[type="radio"] + .input__label {
+    position: relative;
+    margin-left: 30px;
+    color: @dark-shade-50;
+    display: block;
+  }
+
+  /*&__field[type="checkbox"] + .input__label:before,*/
+  &__field[type="radio"] + .input__label .input__toggle {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: calc(100% + 10px);
+    border: 1px solid @dark-shade-25;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__field[type="radio"] + .input__label .input__fill {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: @gradient;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    visibility: hidden;
+  }
+
+  /*&__field[type="checkbox"] + .input__label:after {
+    position: absolute;
+    content: "";
+    visibility: hidden;
+    top: 6px;
+    right: calc(100% + 16px);
+    width: 7px;
+    height: 5px;
+    border-image: @gradient;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-left-width: 2px;
+    border-left-style: solid;
+    border-image-slice: 1;
+    transform: rotateZ(-45deg);
+  }*/
+
+  /*&__field[type="checkbox"] + .input__label:before {
+    border-radius: 4px;
+  }*/
+
+  &__field[type="radio"] + .input__label .input__toggle {
+    border-radius: 50%;
+  }
+
+  /*&__field[type="checkbox"]:checked + .input__label:before,*/
+  &__field[type="radio"]:checked + .input__label .input__toggle {
+    border-color: #bc9cff;
+  }
+
+  &__field[type="radio"]:checked + .input__label .input__fill {
+    visibility: visible;
+  }
+
+  /*&__field[type="checkbox"]:checked + .input__label:after {
+    visibility: visible;
+  }*/
+
+  &__field-list.list-row > &__field,
+  &__field-list.list-row > &__field-group {
+    margin-right: 20px;
+  }
+
+  &__field-list.list-row > &__field:last-child,
+  &__field-list.list-row > &__field-group:last-child {
+    margin-right: 0;
+  }
+
+  &__field-list.list-column > &__field,
+  &__field-list.list-column > &__field-group {
+    margin-bottom: 10px;
+  }
+
+  &__field-list.list-column > &__field:last-child,
+  &__field-list.list-column > &__field-group:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.input-group {
+  display: flex;
+  width: 320px;
+
+  .input-list > & {
+    margin-bottom: 1rem;
+  }
+
+  .input-list > &:last-child {
+    margin-bottom: 0;
+  }
+}
