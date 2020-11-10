@@ -1,16 +1,12 @@
 .typo {
-  flex-basis: 500px;
-
-  &__list {
-    margin-bottom: 30px;
+  display: flex;
+  margin-bottom: 50px;
+  position: relative;
+  &:last-child {
+    margin-bottom: 0;
   }
-  &__item {
-    display: flex;
-    margin-bottom: 50px;
-    position: relative;
-    &:last-child {
-      margin-bottom: 0;
-    }
+  &-list {
+    margin-bottom: 30px;
   }
   &__tag {
     position: absolute;

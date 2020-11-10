@@ -1,0 +1,23 @@
+.input-like .input {
+  &__like {
+    width: 15px;
+    height: 15px;
+  }
+  &__like path {
+    fill: red;
+  }
+
+  &__like {
+    fill: @dark-shade-25;
+  }
+
+  &__field:checked + .input__label path {
+    fill: red;
+  }
+
+  &__field:checked + .input__label .input__like {
+    width: 20px;
+    height: 20px;
+    fill: red;
+  }
+}
